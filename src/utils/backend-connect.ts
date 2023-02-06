@@ -19,7 +19,7 @@ export async function calculate_hdbscan_clusters(X, min_cluster_size, min_cluste
   formData.append('min_cluster_samples', min_cluster_samples);
   formData.append('allow_single_cluster', allow_single_cluster);
   formData.append('X', X);
-  return fetch(`${baseUrl}/segmentation`, {
+  return fetch(`http://localhost:5000/segmentation`, {
     method: 'POST',
     body: formData,
   })
